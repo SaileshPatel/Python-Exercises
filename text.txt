@@ -1,0 +1,3 @@
+Hello, I'm a sheep
+Hello, I'm editing this from the command line.
+I can't wait to teach python.
