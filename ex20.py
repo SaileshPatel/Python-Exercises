@@ -8,9 +8,11 @@ script, input_file = argv
 def print_all(f):
 	print f.read()
 
+# creating function with argument in function
 def rewind(f):
 	f.seek(0)
 
+# creating function with two arguments in function
 def print_a_line(line_count, f):
 	print line_count, f.readline()
 
@@ -18,6 +20,7 @@ current_file = open(input_file)
 
 print "First let's print the whole file:\n"
 
+# printing the contents of 'current_file'
 print_all(current_file)
 
 print "Now let's rewind, kid of like a tape."
