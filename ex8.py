@@ -1,5 +1,7 @@
+# assigning string with formatters to the variable 'formatter'
 formatter = "%r %r %r %r"
 
+# printing formatter with other values representing the formatters.
 print formatter % (1, 2, 3, 4)
 print formatter % ("one", "two", "three", "four")
 print formatter % (True, False, False, True)

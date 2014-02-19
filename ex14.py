@@ -1,5 +1,7 @@
+# importing 'argv' from 'sys' library
 from sys import argv
 
+# assigning two variables 
 script, user_name = argv
 prompt = '> '
 
