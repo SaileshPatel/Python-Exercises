@@ -16,6 +16,7 @@ def rewind(f):
 def print_a_line(line_count, f):
 	print line_count, f.readline()
 
+# assigning operator to variable. 
 current_file = open(input_file)
 
 print "First let's print the whole file:\n"
@@ -23,7 +24,7 @@ print "First let's print the whole file:\n"
 # printing the contents of 'current_file'
 print_all(current_file)
 
-print "Now let's rewind, kid of like a tape."
+print "Now let's rewind, kind of like a tape."
 
 rewind(current_file)
 
