@@ -2,6 +2,7 @@
 def add(a, b):
 	# the function prints the following string with formatters
 	print "ADDING %d + %d" % (a, b)
+	# the function then returns the answer to a mathematic sum
 	return a + b
 
 def subtract(a, b):
@@ -19,6 +20,7 @@ def divide(a, b):
 # printing string!
 print "Let's do some maths with just functions!"
 
+# assigning value to variable. the value is add, with the parameters, '30' and '5'
 age = add(30, 5)
 height = subtract(78, 4)
 weight = multiply(90, 2)
