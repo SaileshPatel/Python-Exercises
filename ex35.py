@@ -71,38 +71,58 @@ def bear_room():
 			# printed string
 			print ("I got no idea what that means.")
 
-# created new 
+# created new function
 def cthulhu_room():
+	# printed multiple strings
 	print ("Here you see the great evil Cthulhu.")
 	print ("He, it, whatever stares at you and you go insane.")
-	print ("Do you fee for your life or eat your head?")
+	print ("Do you flee for your life or eat your head?")
 
+	# the variable 'next' collects user input as string
 	next = input("> ")
-
+	# if the string 'flee' is in the variable 'next' 
+	# the following happens
 	if "flee" in next:
+		# the 'start()' function happens
 		start()
+	# if the string 'head' is in the variable 'next'
+	# the following happens
 	elif "head" in next:
+		# the 'dead' function happens
 		dead("Well that was tasty!")
+	# anything else
 	else:
+		# the function 'cthulhu_room()' starts again
 		cthulhu_room()
 
-
+# creating the function 'dead' to kill the program without an error
 def dead(why):
+	# prints the variable why and string
 	print (why, "Good job!")
+	# kills the program without an error
 	exit(0)
 
+# creating the function 'start()' to kick off the program
 def start():
+	# printing multiple strings
 	print ("You are in a dark room.")
 	print ("There is a door to your right and left.")
 	print ("Which one do you take?")
 
+	# the variable next collects user input as a string
 	next = input("> ")
 
+	# if the variable 'next' contains the string 'left'
 	if next == "left":
+		# the function 'bear_room()' starts
 		bear_room()
+	# if the variable 'next' contains the string 'right'
 	elif next == "right":
+		# the function 'cthulhu_room()' starts
 		cthulhu_room()
 	else:
+		# the program is killed by the function 'dead()'
 		dead("You stumble around the room until you starve.")
 
+# after all that, the program finally starts
 start()
