@@ -2,60 +2,11 @@ from sys import exit
 
 def dead(reason):
 	print (reason)
-	print ("Thank you for playing the game!")
 	exit(0)
 
-def past():
-	print ("You are transported back to your worst memory.")
-	print ("Do you change the memory or watch as the events unfold?")
-	next = input("> ")
-
-	if next == "change":
-		dead("You create holes in the wibbly-wobbly timey-wimey! And die as a result of this interference.")		
-	elif next == "watch":
-		print ("Well done! You haven't given in to breaking the time continum!")
-		print ("You now have two options!")
-		print ("You can either have enough money to make your way in life or become a billionare.")
-
-		next = input("> ")
-		
-		if next == "enough":
-			dead("Ha! You lose sucker!")
-		elif next == "billionare":
-			billionare()
-		else:
-			dead("Took too long! LOL!")
-
-	else:
-		dead("Took too long! LOL!")
-
-def future():
-	print ("You are in the future, where we have flying cars and technologies beyond our imaginations.")
-	print ("Do you take the device back so that it can be reverse engineered or do you feign ignorance about being from the past?")
-
-	next = input("> ")
-	if next == "technology":
-		print ("")
-	elif next == "ignorance":
-		print ("")
-	else:
-		dead("Took too long! LOL!!")
-
-def billionare():
-	print ("How many billions do you want?:")
-	money = input("> ")
-	amount = int(money)
-
-	if amount <= 25:
-		print ("You are very modest!")
-	elif amount > 25:
-		dead("You're a greedy bastard! You die immediately.")
-	else:
-		dead("Took too long!")
-
 def start():
-	print ("Welcome!")
-	print ("Do you wish to go to the past or the future?")
+	print("Welcome!")
+	print("Do you wish to go to the past or the future?")
 
 	next = input("> ")
 	if next == "past":
@@ -64,5 +15,48 @@ def start():
 		future()
 	else:
 		dead("Goodbye, dear friend!")
+
+def past():
+	print("You have travelled back to your worst enemy!")
+	print("You have the opportunity to change the memory. \nDo you change it or leave it?")
+	next = input("> ")
+	if next == "change":
+		jail()
+	elif next == "leave":
+		billionare()
+	else:
+		dead("You have made a foolish error.")
+
+def billionare():
+	print("You have chosen wisely. You now have the opportunity to become a billionare.")
+	print("How much money do you want in billions?")
+	next = input("> ")
+	money = int(next)
+	if money <= 50:
+		print("You are a sincere and modest person!")
+		dead("You asked for £", money)
+	elif money > 50:
+		print("You asked for £", money)
+		dead("You really are a greedy person!")
+
+	else:
+		dead("Wow, you couldn't just pick an option could you?")
+
+def future():
+	print("You have travelled to the future!")
+	print("You see a piece of technology, and you are given the opportunity to bring it back to the present.")
+	print("Do you bring the object back to be reverse-engineered or leave it so that time can take its natural course?")
+	next = input("> ")
+	if next == "back":
+		jail()
+	elif next == "leave":
+		billionare()
+	else:
+		dead("Very bad decision!")
+
+def jail():
+	print("Former Agents of SHIELD arrest you and you are brought to the Fridge.")
+	print("You cannot eat with a fork and are only fed meatloaf.")
+	dead("You are killed by fellow inmates for siding with SHIELD!")
 
 start()
